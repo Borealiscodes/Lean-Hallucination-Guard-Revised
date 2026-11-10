@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lhguard"
+version = "4.0.0"
+description = "Deterministic enforcement layer and causal agency validator for Lean 4 reasoning loops."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE.md" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+    "numpy>=1.22.0",
+    "causa @ git+https://github.com"
+]
+
+[project.scripts]
+lhguard-validate = "lhguard.watcher:main"
